@@ -92,12 +92,10 @@ MSE = SSEw/(N-P)
 Fstat = MSR/MSE
 rFstat = round(Fstat,1)
 
-
 #routine for calculating weighted r squared
 ycalc = func(xdata,ans_b,ans_c,ans_d)
 R_Sqr = 1-(SSEw/SSM)
 R_square = round(R_Sqr,5)
-
 
 #plt.plot(xdata,ydata)
 plt.rcParams["font.family"] = "MathJax_Main"
