@@ -70,14 +70,12 @@ normError = round(Error,2)
 P=1
 N=1718
 
-
 #Calculate the chi^2 according to astronomers
 newxsqrd = sum(((ydata[1:-1] - func(xdata,Hubble)[1:-1])**2)/(error[1:-1]**2))
 #normalised newxsqrded is calculated as
 newxsqrded = round(newxsqrd/(N-P),3)
 
 #A version of the reduced chi^2 allowing for the origin 
-#with the addition of 1+ in the denominator
 SSEnumer = sum(((ydata - func(xdata,Hubble))**2)/(sum(func(xdata,Hubble))))
 red_chi2 = np.round(SSEnumer/(N-P),5)
 
